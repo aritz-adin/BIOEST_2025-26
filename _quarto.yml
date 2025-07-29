@@ -10,8 +10,8 @@ website:
         text: Programa
       - href: Practica0.qmd
         text: Práctica 0
-      # - href: Practica1.qmd
-      #   text: Práctica 1
+      - href: Practica1.qmd
+        text: Práctica 1
       # - href: Practica2.qmd
       #   text: Práctica 2
       # - href: Practica3.qmd
