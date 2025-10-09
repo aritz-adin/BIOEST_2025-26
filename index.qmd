@@ -2,4 +2,5 @@
 title: "Prácticas"
 ---
 
-{{< include README.qmd >}}
+```{include}
+README.qmd
