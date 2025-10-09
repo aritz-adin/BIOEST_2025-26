@@ -341,26 +341,5 @@
     "title": "Práctica 1: Lectura y manejo de ficheros",
     "section": "2.2. Realiza los siguientes ejercicios",
     "text": "2.2. Realiza los siguientes ejercicios\n\nCon el fichero datos, visualiza en pantalla la variable fat\n\n\ndatos$fat\n\n [1]  9.5 27.9  7.8 17.8 31.4 25.9 27.4 25.2 31.1 34.7 42.0 29.1 32.5 30.3 33.0\n[16] 33.8 41.1 34.5\n\n\n\nSelecciona las observaciones de las variable fat cuyo valor sea menor que 25 y guárdalas en un objeto llamado low.fat\n\n\npos &lt;- which(datos$fat&lt;25)\n\nlow.fat &lt;- datos[pos,]\nlow.fat\n\n  age  fat sex\n1  23  9.5   M\n3  27  7.8   M\n4  27 17.8   M\n\n\n\nUtiliza el comando table para averiguar cuántos hombres y mujeres hay en el fichero datos.\n\n\ntable(datos$sex)\n\n\n F  M \n14  4 \n\n\n\nHaz un summary del fichero datos\n\n\nsummary(datos)\n\n      age             fat            sex           \n Min.   :23.00   Min.   : 7.80   Length:18         \n 1st Qu.:39.50   1st Qu.:26.27   Class :character  \n Median :51.50   Median :30.70   Mode  :character  \n Mean   :46.33   Mean   :28.61                     \n 3rd Qu.:56.75   3rd Qu.:33.60                     \n Max.   :61.00   Max.   :42.00                     \n\n\n\n\n\n\n\n\n\n\n\nUtiliza la función eda() del paquete PASWR2 para realizar un análisis exploratorio de la variable fat\n\n\neda(datos$fat)\n\n\n\n\n\n\n\n\nSize (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu \n  18.000    0.000    7.800   26.275   28.611   30.700   28.611   33.600 \n     Max    Stdev      Var  SE Mean   I.Q.R.    Range Kurtosis Skewness \n  42.000    9.144   83.620    2.155    7.325   34.200    0.141   -0.888 \nSW p-val \n   0.043"
-  },
-  {
-    "objectID": "docs/index.html",
-    "href": "docs/index.html",
-    "title": "Máster Universitario en Salud Pública",
-    "section": "",
-    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso\n\n\n\n\n\n\nPara la realización de esta práctica, puede consultarse el texto:\nUgarte, M.D., Militino, A.F., and Arnholt, A.T. (2016). Probability and Statistics with R (Second Edition). Chapman and Hall."
-  },
-  {
-    "objectID": "docs/index.html#bioestadística-curso-2025-26.",
-    "href": "docs/index.html#bioestadística-curso-2025-26.",
-    "title": "Máster Universitario en Salud Pública",
-    "section": "",
-    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso"
-  },
-  {
-    "objectID": "docs/index.html#bibliografía",
-    "href": "docs/index.html#bibliografía",
-    "title": "Máster Universitario en Salud Pública",
-    "section": "",
-    "text": "Para la realización de esta práctica, puede consultarse el texto:\nUgarte, M.D., Militino, A.F., and Arnholt, A.T. (2016). Probability and Statistics with R (Second Edition). Chapman and Hall."
   }
 ]
