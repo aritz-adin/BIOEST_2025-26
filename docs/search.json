@@ -68,5 +68,47 @@
     "title": "Práctica 0: Introducción a R",
     "section": "",
     "text": "En primer lugar, debemos estar seguros de cuál es nuestro directorio de trabajo.\n\n\ngetwd()\n\n\nDescarga el fichero Bodyfat.txt desde MiAulario, léelo en R y almacénalo en un objeto llamado datos.\n\n\ndatos &lt;- read.table(\"BodyFat.txt\", header=TRUE)\n\nhead(datos)\n\n\nGuarda el fichero datos en el archivo Bodyfat.Rdata.\n\n\nsave(datos, file=\"BodyFat.Rdata\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "",
+    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso"
+  },
+  {
+    "objectID": "index.html#bioestadística-curso-2025-26.",
+    "href": "index.html#bioestadística-curso-2025-26.",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "",
+    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso"
+  },
+  {
+    "objectID": "index.html#bibliografía",
+    "href": "index.html#bibliografía",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "Bibliografía",
+    "text": "Bibliografía\nPara la realización de esta práctica, puede consultarse el texto:\nUgarte, M.D., Militino, A.F., and Arnholt, A.T. (2016). Probability and Statistics with R (Second Edition). Chapman and Hall."
+  },
+  {
+    "objectID": "docs/index.html",
+    "href": "docs/index.html",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "",
+    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso\n\n\n\n\n\n\nPara la realización de esta práctica, puede consultarse el texto:\nUgarte, M.D., Militino, A.F., and Arnholt, A.T. (2016). Probability and Statistics with R (Second Edition). Chapman and Hall."
+  },
+  {
+    "objectID": "docs/index.html#bioestadística-curso-2025-26.",
+    "href": "docs/index.html#bioestadística-curso-2025-26.",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "",
+    "text": "Fecha\nTítulo\n\n\n\n\n06-octubre\nPráctica 0: Introducción a R\n\n\n08-octubre\nPráctica 1: Lectura y manejo de ficheros\n\n\n20-octubre\nPráctica 2: Estadística descriptiva\n\n\n29-octubre\nPráctica 3: Contrastes paramétricos\n\n\n10-noviembre\nPráctica 4: Regresión lineal\n\n\n17-noviembre\nPráctica 5: Asociación. Riesgos relativos y Odds Ratio\n\n\n26-noviembre\nPráctica 6: Regresión logística\n\n\n15-diciembre\nPráctica 7: Análisis de supervivencia\n\n\n17-diciembre\nPráctica repaso"
+  },
+  {
+    "objectID": "docs/index.html#bibliografía",
+    "href": "docs/index.html#bibliografía",
+    "title": "Máster Universitario en Salud Pública",
+    "section": "",
+    "text": "Para la realización de esta práctica, puede consultarse el texto:\nUgarte, M.D., Militino, A.F., and Arnholt, A.T. (2016). Probability and Statistics with R (Second Edition). Chapman and Hall."
   }
 ]
