@@ -2,5 +2,5 @@
 title: "Prácticas"
 ---
 
-```{include}
-README.qmd
+```{r child="README.qmd"}
+```
