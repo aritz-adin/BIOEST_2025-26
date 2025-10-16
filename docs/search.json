@@ -25,42 +25,42 @@
     "href": "Practica2.html#cuántas-variables-tiene-el-fichero-diabetes",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.2 ¿Cuántas variables tiene el fichero diabetes?",
-    "text": "1.2 ¿Cuántas variables tiene el fichero diabetes?"
+    "text": "1.2 ¿Cuántas variables tiene el fichero diabetes?\n\ndim(diabetes)\n\n[1] 403  16"
   },
   {
     "objectID": "Practica2.html#de-qué-tipo-es-cada-variable",
     "href": "Practica2.html#de-qué-tipo-es-cada-variable",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.3 ¿De qué tipo es cada variable?",
-    "text": "1.3 ¿De qué tipo es cada variable?"
+    "text": "1.3 ¿De qué tipo es cada variable?\n\nstr(diabetes)\n\n'data.frame':   403 obs. of  16 variables:\n $ id      : int  1000 1001 1002 1003 1005 1008 1011 1015 1016 1022 ...\n $ chol    : num  203 165 228 78 249 248 195 227 177 263 ...\n $ stab.glu: int  82 97 92 93 90 94 92 75 87 89 ...\n $ hdl     : num  56 24 37 12 28 69 41 44 49 40 ...\n $ ratio   : num  3.6 6.9 6.2 6.5 8.9 ...\n $ glyhb   : num  4.31 4.44 4.64 4.63 7.72 ...\n $ location: Factor w/ 2 levels \"Buckingham\",\"Louisa\": 1 1 1 1 1 1 1 1 1 1 ...\n $ age     : int  46 29 58 67 64 34 30 37 45 55 ...\n $ gender  : Factor w/ 2 levels \"female\",\"male\": 1 1 1 2 2 2 2 2 2 1 ...\n $ height  : num  62 64 61 67 68 71 69 59 69 63 ...\n $ weight  : num  121 218 256 119 183 190 191 170 166 202 ...\n $ frame   : Factor w/ 3 levels \"large\",\"medium\",..: 2 1 1 1 2 1 2 2 1 3 ...\n $ bp.1s   : num  118 112 190 110 138 ...\n $ bp.1d   : num  59 68 92 50 80 ...\n $ waist   : num  29 46 49 33 44 36 46 34 34 45 ...\n $ hip     : num  38 48 57 38 41 42 49 39 40 50 ..."
   },
   {
     "objectID": "Practica2.html#cuántas-categorías-tiene-la-variable-frame",
     "href": "Practica2.html#cuántas-categorías-tiene-la-variable-frame",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.4 ¿Cuántas categorías tiene la variable frame?",
-    "text": "1.4 ¿Cuántas categorías tiene la variable frame?"
+    "text": "1.4 ¿Cuántas categorías tiene la variable frame?\n\nlevels(diabetes$frame)\n\n[1] \"large\"  \"medium\" \"small\""
   },
   {
     "objectID": "Practica2.html#obtén-una-tabla-de-frecuencias-absolutas-y-relativas-para-la-variable-frame.",
     "href": "Practica2.html#obtén-una-tabla-de-frecuencias-absolutas-y-relativas-para-la-variable-frame.",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.5 Obtén una tabla de frecuencias absolutas y relativas para la variable frame.",
-    "text": "1.5 Obtén una tabla de frecuencias absolutas y relativas para la variable frame."
+    "text": "1.5 Obtén una tabla de frecuencias absolutas y relativas para la variable frame.\nNOTA: Primero debemos reordenar los niveles de la variable.\n\ndiabetes$frame &lt;- ordered(diabetes$frame,\n                          levels=c(\"small\",\"medium\",\"large\"))\n\n\ntable(diabetes$frame)\n\n\n small medium  large \n   104    196    103 \n\n100*table(diabetes$frame)/nrow(diabetes)\n\n\n   small   medium    large \n25.80645 48.63524 25.55831"
   },
   {
     "objectID": "Practica2.html#realiza-una-representación-gráfica-adecuada-para-la-variable-frame.-qué-información-obtienes",
     "href": "Practica2.html#realiza-una-representación-gráfica-adecuada-para-la-variable-frame.-qué-información-obtienes",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.6 Realiza una representación gráfica adecuada para la variable frame. ¿Qué información obtienes?",
-    "text": "1.6 Realiza una representación gráfica adecuada para la variable frame. ¿Qué información obtienes?"
+    "text": "1.6 Realiza una representación gráfica adecuada para la variable frame. ¿Qué información obtienes?\n\nn &lt;- table(diabetes$frame)\n\n# Diagrama de barras\nbarplot(n, col=c(\"red\",\"blue\",\"green\"), main=\"Tamaño del cuerpo\")\n\n\n\n\n\n\n\n# Diagrama de sectores\npie(n, col=c(\"red\",\"blue\",\"green\"), main=\"Tamaño del cuerpo\")"
   },
   {
     "objectID": "Practica2.html#calcula-la-moda-de-la-variable-frame.-qué-significa",
     "href": "Practica2.html#calcula-la-moda-de-la-variable-frame.-qué-significa",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.7 Calcula la moda de la variable frame. ¿Qué significa?",
-    "text": "1.7 Calcula la moda de la variable frame. ¿Qué significa?"
+    "text": "1.7 Calcula la moda de la variable frame. ¿Qué significa?\n\nModa: medium\nIntepretación: La mayoría de los pacientes tienen tamaño del cuerpo mediano"
   },
   {
     "objectID": "Practica2.html#qué-representaciones-gráficas-te-parecen-adecuadas-para-la-variable-chol",
@@ -74,7 +74,7 @@
     "href": "Practica2.html#realiza-un-histograma-y-un-diagrama-de-cajas-de-la-variable-chol.-qué-información-obtienes-de-ellos",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.9 Realiza un histograma y un diagrama de cajas de la variable chol. ¿Qué información obtienes de ellos?",
-    "text": "1.9 Realiza un histograma y un diagrama de cajas de la variable chol. ¿Qué información obtienes de ellos?"
+    "text": "1.9 Realiza un histograma y un diagrama de cajas de la variable chol. ¿Qué información obtienes de ellos?\n\npar(mfrow=c(1,2))\n\nhist(diabetes$chol, main=\"Histograma\", xlab=\"Colesterol\")\nboxplot(diabetes$chol, main=\"Diagrama de caja\", xlab=\"Colesterol\")"
   },
   {
     "objectID": "Practica2.html#a-la-vista-del-diagrama-de-cajas-y-del-histograma-de-la-variable-chol-qué-puedes-decir-acerca-de-su-simetría-qué-crees-que-será-mayor-la-media-o-la-mediana",
@@ -88,7 +88,7 @@
     "href": "Practica2.html#calcula-el-coeficiente-de-asimetría-la-media-y-la-mediana-de-la-variable-chol.",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.11 Calcula el coeficiente de asimetría, la media y la mediana de la variable chol.",
-    "text": "1.11 Calcula el coeficiente de asimetría, la media y la mediana de la variable chol."
+    "text": "1.11 Calcula el coeficiente de asimetría, la media y la mediana de la variable chol.\n\nlibrary(PASWR2)\n\nCargando paquete requerido: lattice\n\n\nCargando paquete requerido: ggplot2\n\neda(diabetes$chol)\n\n\n\n\n\n\n\n\nSize (n)  Missing  Minimum   1st Qu     Mean   Median   TrMean   3rd Qu \n 403.000    0.000   78.000  179.000  207.846  204.000  205.903  230.000 \n     Max    Stdev      Var  SE Mean   I.Q.R.    Range Kurtosis Skewness \n 443.000   44.390 1970.494    2.211   51.000  365.000    2.558    0.924 \nSW p-val \n   0.000 \n\n\n\nCoeficiente de asimetria: 0.924\nIntepretación: Como el coeficiente es positivo, la distribución de la variable colesterol muestra una asimetría hacia la derecha. Es decir, los niveles de colesterol por encima de la media (207.85 mg/dL) están más dispersos que los valores por debajo de ella.\nMediana: 204 mg/dl\nIntepretación: La mitad de los pacientes tienen un colesterol (inferior a) menor o igual a 204 mg/dl\nPercentil 75 (Cuartil 3): 230 mg/dl\nIntepretación: El 75% de los paciente tiene un colesterol de 230 mg/dl o menos."
   },
   {
     "objectID": "Practica2.html#calcula-el-mínimo-el-máximo-los-cuartiles-y-la-desviación-típica-de-la-variable-chol.-entre-qué-valores-se-encuentra-el-25-de-las-personas-con-el-colesterol-más-alto-y-el-75-de-las-personas-con-el-colesterol-más-bajo-qué-puedes-decir-acerca-de-la-dispersión-de-la-variable-dónde-hay-más-dispersión-en-el-25-de-las-personas-con-mayor-colesterol-o-en-el-25-de-las-personas-con-colesterol-más-bajo",
@@ -102,28 +102,28 @@
     "href": "Practica2.html#calcula-el-coeficiente-de-curtosis-de-la-variable-chol.-qué-indica",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.13 Calcula el coeficiente de curtosis de la variable chol. ¿Qué indica?",
-    "text": "1.13 Calcula el coeficiente de curtosis de la variable chol. ¿Qué indica?"
+    "text": "1.13 Calcula el coeficiente de curtosis de la variable chol. ¿Qué indica?\n\nCurtosis: 2.558\nIntepretación: Como la curtosis es positiva, la distribución de la variable colesterol muestra una mayor concentración en torno a la media (207.85 mg/dL) que una distribución normal."
   },
   {
     "objectID": "Practica2.html#según-el-diagrama-de-cajas-existe-alguna-observación-atípica-alguna-de-ellas-es-un-valor-extremo",
     "href": "Practica2.html#según-el-diagrama-de-cajas-existe-alguna-observación-atípica-alguna-de-ellas-es-un-valor-extremo",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.14 Según el diagrama de cajas, ¿existe alguna observación atípica? ¿Alguna de ellas es un valor extremo?",
-    "text": "1.14 Según el diagrama de cajas, ¿existe alguna observación atípica? ¿Alguna de ellas es un valor extremo?"
+    "text": "1.14 Según el diagrama de cajas, ¿existe alguna observación atípica? ¿Alguna de ellas es un valor extremo?\n\nb &lt;- boxplot(diabetes$chol)\n\n\n\n\n\n\n\nb$out\n\n[1]  78 443 318 347 342 404 307 337 322\n\n## Para calcular valores extremos, debemos tipificar la variable ##\ndiabetes$Z.chol &lt;- (diabetes$chol-mean(diabetes$chol))/sd(diabetes$chol)\n\npos &lt;- which(diabetes$Z.chol&lt; -3 | diabetes$Z.chol&gt;3)\ndiabetes[pos,]\n\n       id chol stab.glu hdl ratio glyhb   location age gender height weight\n63   2778  443      185  23  19.3 14.31 Buckingham  51 female     70    235\n148 12769  347      197  42   8.3  6.34 Buckingham  36   male     70    277\n213 15800  342      251  48   7.1 12.67 Buckingham  63 female     65    201\n295 20313  404      206  33  12.2 10.75     Louisa  56   male     69    159\n     frame bp.1s bp.1d waist hip   Z.chol\n63  medium   158    98    43  48 5.297431\n148  large   140    86    51  49 3.134793\n213 medium   178    88    45  46 3.022156\n295 medium   162    88    38  39 4.418859\n\n\n\nLos valores de colesterol 443, 404, 347 y 342 mg/dL son valores extremos."
   },
   {
     "objectID": "Practica2.html#cuántos-hombres-y-cuántas-mujeres-hay-en-la-muestra",
     "href": "Practica2.html#cuántos-hombres-y-cuántas-mujeres-hay-en-la-muestra",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.15 ¿Cuántos hombres y cuántas mujeres hay en la muestra?",
-    "text": "1.15 ¿Cuántos hombres y cuántas mujeres hay en la muestra?"
+    "text": "1.15 ¿Cuántos hombres y cuántas mujeres hay en la muestra?\n\ntable(diabetes$gender)\n\n\nfemale   male \n   234    169"
   },
   {
     "objectID": "Practica2.html#cuántas-personas-residen-en-buckingham-cuántas-en-louisa",
     "href": "Practica2.html#cuántas-personas-residen-en-buckingham-cuántas-en-louisa",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.16 ¿Cuántas personas residen en Buckingham? ¿Cuántas en Louisa?",
-    "text": "1.16 ¿Cuántas personas residen en Buckingham? ¿Cuántas en Louisa?"
+    "text": "1.16 ¿Cuántas personas residen en Buckingham? ¿Cuántas en Louisa?\n\ntable(diabetes$location)\n\n\nBuckingham     Louisa \n       200        203"
   },
   {
     "objectID": "Practica2.html#puedes-calcular-la-media-y-la-mediana-de-la-variable-location",
@@ -137,28 +137,28 @@
     "href": "Practica2.html#realiza-un-diagrama-de-cajas-de-la-variable-chol-según-las-categorías-de-la-variable-frame.",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.18 Realiza un diagrama de cajas de la variable chol según las categorías de la variable frame.",
-    "text": "1.18 Realiza un diagrama de cajas de la variable chol según las categorías de la variable frame."
+    "text": "1.18 Realiza un diagrama de cajas de la variable chol según las categorías de la variable frame.\n\nboxplot(diabetes$chol ~ diabetes$frame)\n\n\n\n\n\n\n\n# También se puede escribir como:\nboxplot(chol ~ frame, data=diabetes)"
   },
   {
     "objectID": "Practica2.html#realiza-un-diagrama-de-cajas-de-la-variable-chol-según-las-categorías-de-la-frame-y-la-variable-gender.",
     "href": "Practica2.html#realiza-un-diagrama-de-cajas-de-la-variable-chol-según-las-categorías-de-la-frame-y-la-variable-gender.",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.19 Realiza un diagrama de cajas de la variable chol según las categorías de la frame y la variable gender.",
-    "text": "1.19 Realiza un diagrama de cajas de la variable chol según las categorías de la frame y la variable gender."
+    "text": "1.19 Realiza un diagrama de cajas de la variable chol según las categorías de la frame y la variable gender.\n\nboxplot(chol ~ frame + gender, data=diabetes)"
   },
   {
     "objectID": "Practica2.html#calcula-la-media-mediana-la-desviación-típica-y-los-cuartiles-de-la-variable-chol-según-las-categorías-de-la-variable-frame",
     "href": "Practica2.html#calcula-la-media-mediana-la-desviación-típica-y-los-cuartiles-de-la-variable-chol-según-las-categorías-de-la-variable-frame",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.20 Calcula la media, mediana, la desviación típica y los cuartiles de la variable chol según las categorías de la variable frame?",
-    "text": "1.20 Calcula la media, mediana, la desviación típica y los cuartiles de la variable chol según las categorías de la variable frame?"
+    "text": "1.20 Calcula la media, mediana, la desviación típica y los cuartiles de la variable chol según las categorías de la variable frame?\n\ntapply(diabetes$chol, diabetes$frame, summary)\n\n$small\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  118.0   169.5   196.0   197.6   219.2   307.0 \n\n$medium\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  115.0   181.0   206.5   213.2   239.2   443.0 \n\n$large\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n   78.0   181.5   206.0   208.0   231.5   347.0 \n\ntapply(diabetes$chol, diabetes$frame, sd)\n\n   small   medium    large \n38.95477 46.87484 43.25211"
   },
   {
     "objectID": "Practica2.html#realiza-un-histograma-de-la-variable-chol-según-las-categorías-de-la-variable-frame-y-la-variable-gender.",
     "href": "Practica2.html#realiza-un-histograma-de-la-variable-chol-según-las-categorías-de-la-variable-frame-y-la-variable-gender.",
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "1.21 Realiza un histograma de la variable chol según las categorías de la variable frame y la variable gender.",
-    "text": "1.21 Realiza un histograma de la variable chol según las categorías de la variable frame y la variable gender."
+    "text": "1.21 Realiza un histograma de la variable chol según las categorías de la variable frame y la variable gender.\n\nhistogram( ~ chol | frame*gender, data=diabetes)"
   },
   {
     "objectID": "Practica2.html#calcula-la-media-la-mediana-los-cuartiles-y-la-desviación-típica-de-la-variable-glyhb.-explica-cómo-está-de-dispersa-utilizando-el-histograma-el-diagrama-de-cajas-los-cuartiles-y-la-desviación-típica.",
