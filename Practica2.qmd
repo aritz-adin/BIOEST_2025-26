@@ -311,6 +311,16 @@ prop.table(Y)
 prop.table(Y,1)
 ```
 
+## EJERCICIOS: Para resolver en clase
+
+Cruza las variables `gender` y `frame` y responde a las siguientes preguntas
+
+-   ¿Cuántas mujeres tienen body frame *large*?
+-   ¿Qué porcentaje de mujeres tienen body frame *large*?
+-   ¿Cuál es el porcentaje de hombres con body frame *small*?
+-   ¿Qué porcentaje de pacientes con body frame *medium* son hombres?
+
+
 # 3. Covarianza y correlación
 
 ## 3.1 Realiza un diagrama de dispersión de las variables `weight` y `waist`. ¿Crees que existe relación lineal entre ambas variables? Calcula la covarianza y el coeficiente de correlación lineal.
@@ -371,137 +381,129 @@ corrplot(cor.matrix, method="circle", type="upper")
 corrplot(cor.matrix, method="number", type="upper")
 ```
 
-# EJERCICIOS: Para resolver en clase
 
-Cruza las variables `gender` y `frame` y responde a las siguientes preguntas
+# EJERCICIOS A ENTREGAR
 
--   ¿Cuántas mujeres tienen body frame *large*?
--   ¿Qué porcentaje de mujeres tienen body frame *large*?
--   ¿Cuál es el porcentaje de hombres con body frame *small*?
--   ¿Qué porcentaje de pacientes con body frame *medium* son hombres?
+Una Organización de Salud busca identificar qué factores de los pacientes están más asociados con la remisión del cáncer de pulmón tras el tratamiento, en el marco de un estudio más amplio sobre los resultados del tratamiento y la calidad de vida de los pacientes con esta enfermedad.
 
-<!-- # EJERCICIOS A ENTREGAR -->
+El archivo `patients.txt` contiene las siguientes variables medidas sobre un conjunto de datos de 8.525 pacientes.
 
-<!-- Una Organización de Salud busca identificar qué factores de los pacientes están más asociados con la remisión del cáncer de pulmón tras el tratamiento, en el marco de un estudio más amplio sobre los resultados del tratamiento y la calidad de vida de los pacientes con esta enfermedad. -->
+-   `remission`: response variable (0=no, 1=yes)
 
-<!-- El archivo `patients.txt` contiene las siguientes variables medidas sobre un conjunto de datos de 8.525 pacientes. -->
+-   `Age`: age of the patient (in years)
 
-<!-- -   `remission`: response variable (0=no, 1=yes) -->
+-   `IL6`: Interleukin-6 concentration in blood (pg/ml)
 
-<!-- -   `Age`: age of the patient (in years) -->
+-   `CRP`: C-reactive protein concentration in blood (mg/dl)
 
-<!-- -   `IL6`: Interleukin-6 concentration in blood (pg/ml) -->
+-   `LengthofStay`: duration of a patient's hospital stay (in weeks)
 
-<!-- -   `CRP`: C-reactive protein concentration in blood (mg/dl) -->
+-   `CancerStage`: lung cancer stage (I, II, III or IV)
 
-<!-- -   `LengthofStay`: duration of a patient's hospital stay (in weeks) -->
+-   `Smoking`: is the patient a smoker? (1=never, 2=former, 3=current)
 
-<!-- -   `CancerStage`: lung cancer stage (I, II, III or IV) -->
+-   `ID.hospital`: ID of the hospital
 
-<!-- -   `Smoking`: is the patient a smoker? (1=never, 2=former, 3=current) -->
+```{r}
+patients <- read.table(file="patients.txt", header=T, stringsAsFactors=T)
 
-<!-- -   `ID.hospital`: ID of the hospital -->
+head(patients)
+```
 
-<!-- ```{r} -->
-<!-- patients <- read.table(file="patients.txt", header=T, stringsAsFactors=T) -->
+En primer lugar, selecciona los pacientes asociados a tu código de hospital (`ID.hospital`) e indica cuántos pacientes pertenecen a dicho hospital.
 
-<!-- head(patients) -->
-<!-- ``` -->
+Por ejemplo:
 
-<!-- En primer lugar, selecciona los pacientes asociados a tu código de hospital (`ID.hospital`) e indica cuántos pacientes pertenecen a dicho hospital. -->
+```{r}
+pos <- which(patients$ID.hospital=="1")
+datos <- patients[pos,]
 
-<!-- Por ejemplo: -->
+str(datos)
+```
 
-<!-- ```{r} -->
-<!-- pos <- which(patients$ID.hospital=="1") -->
-<!-- datos <- patients[pos,] -->
+El hospital "1" contiene 252 pacientes.
 
-<!-- str(datos) -->
-<!-- ``` -->
+## 1) Realiza un histograma y un diagrama de cajas de la variable `IL6`. ¿Qué puedes decir acerca de la simetría y la dispersión de la variable?
 
-<!-- El hospital "1" contiene 252 pacientes. -->
+```{r include=FALSE}
+par(mfrow=c(1,2))
 
-<!-- ## 1) Realiza un histograma y un diagrama de cajas de la variable `IL6`. ¿Qué puedes decir acerca de la simetría y la dispersión de la variable? -->
+hist(datos$IL6, xlab="Interleukin-6 concentration in blood", main=paste0("ID.hospital=",1))
 
-<!-- ```{r include=FALSE} -->
-<!-- par(mfrow=c(1,2)) -->
+boxplot(datos$IL6, xlab="Interleukin-6 concentration in blood", main=paste0("ID.hospital=",1))
 
-<!-- hist(datos$IL6, xlab="Interleukin-6 concentration in blood", main=paste0("ID.hospital=",1)) -->
+```
 
-<!-- boxplot(datos$IL6, xlab="Interleukin-6 concentration in blood", main=paste0("ID.hospital=",1)) -->
+## 2) Calcula la media, mediana, cuartiles, desviación típica, coeficientes de asimetría y de curtosis, y los coeficientes de variación. Indica sus unidades e interpreta los estadísticos (en aquellos casos que sea posible).
 
-<!-- ``` -->
+```{r include=FALSE}
 
-<!-- ## 2) Calcula la media, mediana, cuartiles, desviación típica, coeficientes de asimetría y de curtosis, y los coeficientes de variación. Indica sus unidades e interpreta los estadísticos (en aquellos casos que sea posible). -->
+PASWR2::eda(datos$IL6)
 
-<!-- ```{r include=FALSE} -->
+CV <- sd(datos$IL6)/mean(datos$IL6)
 
-<!-- PASWR2::eda(datos$IL6) -->
+CV
 
-<!-- CV <- sd(datos$IL6)/mean(datos$IL6) -->
+```
 
-<!-- CV -->
+## 3) Dibuja un histograma y un diagrama de cajas en función de la variable `CancerStage`. Interpreta los gráficos obtenidos.
 
-<!-- ``` -->
+```{r, include=FALSE}
 
-<!-- ## 3) Dibuja un histograma y un diagrama de cajas en función de la variable `CancerStage`. Interpreta los gráficos obtenidos. -->
+library(lattice)
 
-<!-- ```{r, include=FALSE} -->
+boxplot(datos$IL6 ~ datos$CancerStage,
 
-<!-- library(lattice) -->
+        ylab="IL6 concentration in blood (pg/ml)", xlab="Remission")
 
-<!-- boxplot(datos$IL6 ~ datos$CancerStage, -->
+histogram(~ IL6 | CancerStage, xlab="IL6 concentration in blood (pg/ml)", type="density", data=datos)
 
-<!--         ylab="IL6 concentration in blood (pg/ml)", xlab="Remission") -->
+```
 
-<!-- histogram(~ IL6 | CancerStage, xlab="IL6 concentration in blood (pg/ml)", type="density", data=datos) -->
+## 4) Realiza un diagrama de dispersión de las variables `IL6` y `CRP`. ¿Crees que existe relación lineal entre ellas? Calcula e interpreta la covarianza y el coeficiente de correlación lineal (indica sus unidades).
 
-<!-- ``` -->
+```{r, include=FALSE}
 
-<!-- ## 4) Realiza un diagrama de dispersión de las variables `IL6` y `CRP`. ¿Crees que existe relación lineal entre ellas? Calcula e interpreta la covarianza y el coeficiente de correlación lineal (indica sus unidades). -->
+plot(datos$IL6, datos$CRP,
 
-<!-- ```{r, include=FALSE} -->
+     xlab="IL6 concentration in blood",
 
-<!-- plot(datos$IL6, datos$CRP, -->
+     ylab="C-reactive protein concentration in blood")
 
-<!--      xlab="IL6 concentration in blood", -->
+abline(lm(IL6 ~ CRP, data=datos), col="red")
 
-<!--      ylab="C-reactive protein concentration in blood") -->
+cov(datos$IL6, datos$CRP)
 
-<!-- abline(lm(IL6 ~ CRP, data=datos), col="red") -->
+cor(datos$IL6, datos$CRP)
 
-<!-- cov(datos$IL6, datos$CRP) -->
+```
 
-<!-- cor(datos$IL6, datos$CRP) -->
+## 5) Selecciona el paciente fumador (*never*) y ex-fumador (*former*) con valores más bajos en la variable `CRP`. ¿Cuál de los dos pacientes destaca más en comparación a la media de su grupo? Justifica la respuesta.
 
-<!-- ``` -->
+```{r include=FALSE}
 
-<!-- ## 5) Selecciona el paciente fumador (*never*) y ex-fumador (*former*) con valores más bajos en la variable `CRP`. ¿Cuál de los dos pacientes destaca más en comparación a la media de su grupo? Justifica la respuesta. -->
+pos <- which(datos$Smoking=="never")
 
-<!-- ```{r include=FALSE} -->
+datos.never <- datos[pos,]
 
-<!-- pos <- which(datos$Smoking=="never") -->
+pos <- which(datos$Smoking=="former")
 
-<!-- datos.never <- datos[pos,] -->
+datos.former <- datos[pos,]
 
-<!-- pos <- which(datos$Smoking=="former") -->
+# Calculamos los niveles de CRP mínimos
 
-<!-- datos.former <- datos[pos,] -->
+x <- min(datos.never$CRP)
 
-<!-- # Calculamos los niveles de CRP mínimos -->
+y <- min(datos.former$CRP)
 
-<!-- x <- min(datos.never$CRP) -->
+# Tipificamos los valores
 
-<!-- y <- min(datos.former$CRP) -->
+x.tipif <- (x-mean(datos.never$CRP))/sd(datos.never$CRP)
 
-<!-- # Tipificamos los valores -->
+x.tipif
 
-<!-- x.tipif <- (x-mean(datos.never$CRP))/sd(datos.never$CRP) -->
+y.tipif <- (y-mean(datos.former$CRP))/sd(datos.former$CRP)
 
-<!-- x.tipif -->
+y.tipif
 
-<!-- y.tipif <- (y-mean(datos.former$CRP))/sd(datos.former$CRP) -->
-
-<!-- y.tipif -->
-
-<!-- ``` -->
+```

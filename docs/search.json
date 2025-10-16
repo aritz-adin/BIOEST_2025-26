@@ -238,6 +238,13 @@
     "text": "2.5 Qué porcentaje de hombres tienen un body frame large?"
   },
   {
+    "objectID": "Practica2.html#ejercicios-para-resolver-en-clase",
+    "href": "Practica2.html#ejercicios-para-resolver-en-clase",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "EJERCICIOS: Para resolver en clase",
+    "text": "EJERCICIOS: Para resolver en clase\nCruza las variables gender y frame y responde a las siguientes preguntas\n\n¿Cuántas mujeres tienen body frame large?\n¿Qué porcentaje de mujeres tienen body frame large?\n¿Cuál es el porcentaje de hombres con body frame small?\n¿Qué porcentaje de pacientes con body frame medium son hombres?"
+  },
+  {
     "objectID": "Practica2.html#realiza-un-diagrama-de-dispersión-de-las-variables-weight-y-waist.-crees-que-existe-relación-lineal-entre-ambas-variables-calcula-la-covarianza-y-el-coeficiente-de-correlación-lineal.",
     "href": "Practica2.html#realiza-un-diagrama-de-dispersión-de-las-variables-weight-y-waist.-crees-que-existe-relación-lineal-entre-ambas-variables-calcula-la-covarianza-y-el-coeficiente-de-correlación-lineal.",
     "title": "Práctica 2: Estadística Descriptiva",
@@ -271,6 +278,41 @@
     "title": "Práctica 2: Estadística Descriptiva",
     "section": "A fancy way of visualizing correlation a matrix",
     "text": "A fancy way of visualizing correlation a matrix"
+  },
+  {
+    "objectID": "Practica2.html#realiza-un-histograma-y-un-diagrama-de-cajas-de-la-variable-il6.-qué-puedes-decir-acerca-de-la-simetría-y-la-dispersión-de-la-variable",
+    "href": "Practica2.html#realiza-un-histograma-y-un-diagrama-de-cajas-de-la-variable-il6.-qué-puedes-decir-acerca-de-la-simetría-y-la-dispersión-de-la-variable",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "1) Realiza un histograma y un diagrama de cajas de la variable IL6. ¿Qué puedes decir acerca de la simetría y la dispersión de la variable?",
+    "text": "1) Realiza un histograma y un diagrama de cajas de la variable IL6. ¿Qué puedes decir acerca de la simetría y la dispersión de la variable?"
+  },
+  {
+    "objectID": "Practica2.html#calcula-la-media-mediana-cuartiles-desviación-típica-coeficientes-de-asimetría-y-de-curtosis-y-los-coeficientes-de-variación.-indica-sus-unidades-e-interpreta-los-estadísticos-en-aquellos-casos-que-sea-posible.",
+    "href": "Practica2.html#calcula-la-media-mediana-cuartiles-desviación-típica-coeficientes-de-asimetría-y-de-curtosis-y-los-coeficientes-de-variación.-indica-sus-unidades-e-interpreta-los-estadísticos-en-aquellos-casos-que-sea-posible.",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "2) Calcula la media, mediana, cuartiles, desviación típica, coeficientes de asimetría y de curtosis, y los coeficientes de variación. Indica sus unidades e interpreta los estadísticos (en aquellos casos que sea posible).",
+    "text": "2) Calcula la media, mediana, cuartiles, desviación típica, coeficientes de asimetría y de curtosis, y los coeficientes de variación. Indica sus unidades e interpreta los estadísticos (en aquellos casos que sea posible)."
+  },
+  {
+    "objectID": "Practica2.html#dibuja-un-histograma-y-un-diagrama-de-cajas-en-función-de-la-variable-cancerstage.-interpreta-los-gráficos-obtenidos.",
+    "href": "Practica2.html#dibuja-un-histograma-y-un-diagrama-de-cajas-en-función-de-la-variable-cancerstage.-interpreta-los-gráficos-obtenidos.",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "3) Dibuja un histograma y un diagrama de cajas en función de la variable CancerStage. Interpreta los gráficos obtenidos.",
+    "text": "3) Dibuja un histograma y un diagrama de cajas en función de la variable CancerStage. Interpreta los gráficos obtenidos."
+  },
+  {
+    "objectID": "Practica2.html#realiza-un-diagrama-de-dispersión-de-las-variables-il6-y-crp.-crees-que-existe-relación-lineal-entre-ellas-calcula-e-interpreta-la-covarianza-y-el-coeficiente-de-correlación-lineal-indica-sus-unidades.",
+    "href": "Practica2.html#realiza-un-diagrama-de-dispersión-de-las-variables-il6-y-crp.-crees-que-existe-relación-lineal-entre-ellas-calcula-e-interpreta-la-covarianza-y-el-coeficiente-de-correlación-lineal-indica-sus-unidades.",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "4) Realiza un diagrama de dispersión de las variables IL6 y CRP. ¿Crees que existe relación lineal entre ellas? Calcula e interpreta la covarianza y el coeficiente de correlación lineal (indica sus unidades).",
+    "text": "4) Realiza un diagrama de dispersión de las variables IL6 y CRP. ¿Crees que existe relación lineal entre ellas? Calcula e interpreta la covarianza y el coeficiente de correlación lineal (indica sus unidades)."
+  },
+  {
+    "objectID": "Practica2.html#selecciona-el-paciente-fumador-never-y-ex-fumador-former-con-valores-más-bajos-en-la-variable-crp.-cuál-de-los-dos-pacientes-destaca-más-en-comparación-a-la-media-de-su-grupo-justifica-la-respuesta.",
+    "href": "Practica2.html#selecciona-el-paciente-fumador-never-y-ex-fumador-former-con-valores-más-bajos-en-la-variable-crp.-cuál-de-los-dos-pacientes-destaca-más-en-comparación-a-la-media-de-su-grupo-justifica-la-respuesta.",
+    "title": "Práctica 2: Estadística Descriptiva",
+    "section": "5) Selecciona el paciente fumador (never) y ex-fumador (former) con valores más bajos en la variable CRP. ¿Cuál de los dos pacientes destaca más en comparación a la media de su grupo? Justifica la respuesta.",
+    "text": "5) Selecciona el paciente fumador (never) y ex-fumador (former) con valores más bajos en la variable CRP. ¿Cuál de los dos pacientes destaca más en comparación a la media de su grupo? Justifica la respuesta."
   },
   {
     "objectID": "Practica0.html",
