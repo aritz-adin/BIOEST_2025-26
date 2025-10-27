@@ -10,7 +10,7 @@ format: gfm
 | 06-octubre   | [Práctica 0: Introducción a `R`](./Practica0.html)           |
 | 08-octubre   | [Práctica 1: Lectura y manejo de ficheros](./Practica1.html) |
 | 20-octubre   | [Práctica 2: Estadística descriptiva](./Practica2.html)      |
-| 29-octubre   | Práctica 3: Contrastes paramétricos                          |
+| 29-octubre   | [Práctica 3: Contrastes paramétricos](./Practica3.html)      |
 | 10-noviembre | Práctica 4: Regresión lineal                                 |
 | 17-noviembre | Práctica 5: Asociación. Riesgos relativos y Odds Ratio       |
 | 26-noviembre | Práctica 6: Regresión logística                              |
