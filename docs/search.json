@@ -84,6 +84,27 @@
     "text": "3.2. Utiliza el fichero diabetes.female para responder a las siguientes cuestiones.\na) Contrasta al nivel de significación \\(\\alpha=0.05\\) si existen diferencias entre los niveles medios de glucosa glicosilada (glyhb) según la constitución del tamaño del cuerpo (frame) entre las mujeres.\nb) Si has detectado diferencias, averigua entre qué grupos existen diferencias estadísticamente significativas."
   },
   {
+    "objectID": "Practica3.html#contrasta-al-nivel-de-significación-0.1-si-los-niveles-medios-de-la-concentración-de-interleukina-6-il6-son-significativamente-distintos-en-pacientes-con-cáncer-en-estadio-i-que-en-paciente-con-cáncer-en-estadio-ii.",
+    "href": "Practica3.html#contrasta-al-nivel-de-significación-0.1-si-los-niveles-medios-de-la-concentración-de-interleukina-6-il6-son-significativamente-distintos-en-pacientes-con-cáncer-en-estadio-i-que-en-paciente-con-cáncer-en-estadio-ii.",
+    "title": "Práctica 3: Contrastes de hipótesis y análisis de la varianza",
+    "section": "4.1. Contrasta al nivel de significación 0.1 si los niveles medios de la concentración de Interleukina-6 (IL6) son significativamente distintos en pacientes con cáncer en estadio I que en paciente con cáncer en estadio II.",
+    "text": "4.1. Contrasta al nivel de significación 0.1 si los niveles medios de la concentración de Interleukina-6 (IL6) son significativamente distintos en pacientes con cáncer en estadio I que en paciente con cáncer en estadio II.\n\nDefine correctamente las variables del problema.\nComprueba si las dos muestras provienen de poblaciones normales.\nRealiza el correspondiente test de hipótesis."
+  },
+  {
+    "objectID": "Practica3.html#se-estudió-la-eficacia-de-la-sulfinpirazona-en-prevenir-la-muerte-después-de-sufrir-infarto-de-miocardio.-para-ello-se-consideraron-pacientes-que-habían-sufrido-infarto-de-miocardio.-a-un-grupo-se-les-proporcionó-sulfinpirazona-y-a-otro-grupo-se-les-suministró-placebo.-en-la-siguiente-tabla-se-muestra-el-número-de-pacientes-de-cada-grupo-que-murieron-y-que-superaron-el-infarto.",
+    "href": "Practica3.html#se-estudió-la-eficacia-de-la-sulfinpirazona-en-prevenir-la-muerte-después-de-sufrir-infarto-de-miocardio.-para-ello-se-consideraron-pacientes-que-habían-sufrido-infarto-de-miocardio.-a-un-grupo-se-les-proporcionó-sulfinpirazona-y-a-otro-grupo-se-les-suministró-placebo.-en-la-siguiente-tabla-se-muestra-el-número-de-pacientes-de-cada-grupo-que-murieron-y-que-superaron-el-infarto.",
+    "title": "Práctica 3: Contrastes de hipótesis y análisis de la varianza",
+    "section": "4.2. Se estudió la eficacia de la sulfinpirazona en prevenir la muerte después de sufrir infarto de miocardio. Para ello se consideraron pacientes que habían sufrido infarto de miocardio. A un grupo se les proporcionó sulfinpirazona y a otro grupo se les suministró placebo. En la siguiente tabla se muestra el número de pacientes de cada grupo que murieron y que superaron el infarto.",
+    "text": "4.2. Se estudió la eficacia de la sulfinpirazona en prevenir la muerte después de sufrir infarto de miocardio. Para ello se consideraron pacientes que habían sufrido infarto de miocardio. A un grupo se les proporcionó sulfinpirazona y a otro grupo se les suministró placebo. En la siguiente tabla se muestra el número de pacientes de cada grupo que murieron y que superaron el infarto.\n\n\n\n\nDeath (all causes)\nSurvivors\n\n\n\n\nSulphinpyrazole\n41\n692\n\n\nPlacebo\n60\n682\n\n\n\n\nContrasta al nivel de significación \\(\\alpha=0.01\\) si la proporción de muertes de pacientes que tomaron sulfinpirazona es inferior a la de pacientes que tomaron un placebo."
+  },
+  {
+    "objectID": "Practica3.html#contrasta-al-nivel-de-significación-alpha0.1-si-existen-diferencias-en-la-edad-media-de-los-pacientes-según-el-estadio-de-cancer-cancerstage.",
+    "href": "Practica3.html#contrasta-al-nivel-de-significación-alpha0.1-si-existen-diferencias-en-la-edad-media-de-los-pacientes-según-el-estadio-de-cancer-cancerstage.",
+    "title": "Práctica 3: Contrastes de hipótesis y análisis de la varianza",
+    "section": "4.3. Contrasta al nivel de significación \\(\\alpha=0.1\\) si existen diferencias en la edad media de los pacientes según el estadio de cancer (CancerStage).",
+    "text": "4.3. Contrasta al nivel de significación \\(\\alpha=0.1\\) si existen diferencias en la edad media de los pacientes según el estadio de cancer (CancerStage).\n\nRealiza una exploración gráfica y el análisis de varianza correspondiente\nComprueba si pueden asumirse las hipótesis del modelo\nSi has detectado diferencias, averigua entre qué grupos existen diferencias estadísticamente significativas"
+  },
+  {
     "objectID": "Practica1.html",
     "href": "Practica1.html",
     "title": "Práctica 1: Lectura y manejo de ficheros",
