@@ -141,14 +141,11 @@ legend("topleft", legend=c("Hombres","Mujeres"), lty=1, col=c("blue","red"))
 -   **Ajustamos un modelo de regresión lineal con la función `lm()`**
 ```{r, include=FALSE}
 model.AgeSex <- lm(sbp ~ age + sex, data=datos)
-anova(model.AgeSex)
+summary(model.AgeSex)
 ```
 -   **Proporciona una interpretación para los coeficientes**
 
 $$SBP = \beta_0 + \beta_1*age + \beta_2*I(sex=\mbox{"M"})$$
-```{r, include=FALSE}
-summary(model.AgeSex)
-```
 <!-- -   $\beta_0=96.774$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido) -->
 
 <!-- -   $\beta_0 + \beta_2=110.287$ mmHg: Valor esperado para un hombre de 0 años de edad (en este ejemplo, no tiene sentido) -->
