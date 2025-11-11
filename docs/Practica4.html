@@ -380,16 +380,115 @@ W = 0.93985, p-value = 0.03418</code></pre>
 <section id="emplea-el-fichero-bloodpress1.txt-para-ajustar-un-modelo-de-regresión-lineal-que-permita-estimar-la-presión-sistólica-en-mujeres-según-la-edad." class="level2">
 <h2 class="anchored" data-anchor-id="emplea-el-fichero-bloodpress1.txt-para-ajustar-un-modelo-de-regresión-lineal-que-permita-estimar-la-presión-sistólica-en-mujeres-según-la-edad.">1.2. Emplea el fichero <code>bloodpress1.txt</code> para ajustar un modelo de regresión lineal que permita estimar la presión sistólica en mujeres según la edad.</h2>
 <ul>
-<li><p><strong>Seleccionamos las mujeres, representamos un diagrama de dispersión y ajustamos un modelo de regresión lineal con la función <code>lm()</code></strong></p></li>
-<li><p><strong>Proporciona una interpretación para los coeficientes</strong></p></li>
+<li><strong>Seleccionamos las mujeres, representamos un diagrama de dispersión y ajustamos un modelo de regresión lineal con la función <code>lm()</code></strong></li>
 </ul>
-<!-- -   $\beta_0=97.0771$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido) -->
-<!-- -   $\beta_1=0.9493$: Por cada año que aumenta la edad de una mujer, se espera que la presión sistólica aumente en 0.9493 mmHg. -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>pos <span class="ot">&lt;-</span> <span class="fu">which</span>(datos<span class="sc">$</span>sex<span class="sc">==</span><span class="st">"F"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>datos.female <span class="ot">&lt;-</span> datos[pos,]</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Diagrama de dispersión ##</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos.female<span class="sc">$</span>age, datos.female<span class="sc">$</span>sbp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Practica4_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Covarianza y correlación ##</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cov</span>(datos.female<span class="sc">$</span>age, datos.female<span class="sc">$</span>sbp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 229.867</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(datos.female<span class="sc">$</span>age, datos.female<span class="sc">$</span>sbp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.8439069</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Modelo de regresión lineal ##</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>model.female <span class="ot">&lt;-</span> <span class="fu">lm</span>(sbp<span class="sc">~</span>age, <span class="at">data=</span>datos.female)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ul>
-<li><p><strong>Representa gráficamente la línea ajustada</strong></p></li>
-<li><p><strong>Verifica que se cumplen las hipótesis del modelo</strong></p></li>
-<li><p><strong>Obtén la predicción para cinco mujeres de 23, 26, 32, 55 y 62 años de edad</strong></p></li>
+<li><strong>Proporciona una interpretación para los coeficientes</strong></li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.female)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = sbp ~ age, data = datos.female)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-19.354  -4.797   1.254   4.747  21.153 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  97.0771     5.5276  17.562 2.67e-16 ***
+age           0.9493     0.1161   8.174 8.88e-09 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 9.563 on 27 degrees of freedom
+Multiple R-squared:  0.7122,    Adjusted R-squared:  0.7015 
+F-statistic: 66.81 on 1 and 27 DF,  p-value: 8.876e-09</code></pre>
+</div>
+</div>
+<ul>
+<li><p><span class="math inline">\(\beta_0=97.0771\)</span> mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido)</p></li>
+<li><p><span class="math inline">\(\beta_1=0.9493\)</span>: Por cada año que aumenta la edad de una mujer, se espera que la presión sistólica aumente en 0.9493 mmHg.</p></li>
+<li><p><strong>Representa gráficamente la línea ajustada</strong></p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos.female<span class="sc">$</span>age, datos.female<span class="sc">$</span>sbp)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(model.female, <span class="at">col=</span><span class="st">"red"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Practica4_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>Verifica que se cumplen las hipótesis del modelo</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(PASWR2)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">checking.plots</span>(model.female)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Practica4_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">rstandard</span>(model.female)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">shapiro.test</span>(res)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  res
+W = 0.96328, p-value = 0.3948</code></pre>
+</div>
+</div>
+<ul>
+<li><strong>Obtén la predicción para cinco mujeres de 23, 26, 32, 55 y 62 años de edad</strong></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>newdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">c</span>(<span class="dv">23</span>,<span class="dv">26</span>,<span class="dv">32</span>,<span class="dv">55</span>,<span class="dv">62</span>))</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(model.female, newdata, <span class="at">interval=</span><span class="st">"prediction"</span>)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(newdata, predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age      fit      lwr      upr
+1  23 118.9115  98.2724 139.5506
+2  26 121.7595 101.2909 142.2281
+3  32 127.4554 107.2561 147.6547
+4  55 149.2898 129.1922 169.3874
+5  62 155.9351 135.5735 176.2966</code></pre>
+</div>
+</div>
 </section>
 <section id="emplea-el-fichero-bloodpress1.txt-para-ajustar-un-modelo-de-regresión-lineal-que-permita-estimar-la-presión-sistólica-según-la-edad-y-el-sexo-sin-interacción." class="level2">
 <h2 class="anchored" data-anchor-id="emplea-el-fichero-bloodpress1.txt-para-ajustar-un-modelo-de-regresión-lineal-que-permita-estimar-la-presión-sistólica-según-la-edad-y-el-sexo-sin-interacción.">1.3. Emplea el fichero <code>bloodpress1.txt</code> para ajustar un modelo de regresión lineal que permita estimar la presión sistólica según la edad y el sexo (sin interacción).</h2>
@@ -397,8 +496,8 @@ W = 0.93985, p-value = 0.03418</code></pre>
 <li><strong>Representamos un diagrama de dispersión (incluyendo colores distintos para hombres y mujeres)</strong></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos<span class="sc">$</span>age, datos<span class="sc">$</span>sbp, <span class="at">col=</span><span class="fu">ifelse</span>(datos<span class="sc">$</span>sex<span class="sc">==</span><span class="st">"M"</span>,<span class="st">"blue"</span>,<span class="st">"red"</span>))</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Hombres"</span>,<span class="st">"Mujeres"</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"blue"</span>,<span class="st">"red"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(datos<span class="sc">$</span>age, datos<span class="sc">$</span>sbp, <span class="at">col=</span><span class="fu">ifelse</span>(datos<span class="sc">$</span>sex<span class="sc">==</span><span class="st">"M"</span>,<span class="st">"blue"</span>,<span class="st">"red"</span>))</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topleft"</span>, <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Hombres"</span>,<span class="st">"Mujeres"</span>), <span class="at">lty=</span><span class="dv">1</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"blue"</span>,<span class="st">"red"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -408,15 +507,57 @@ W = 0.93985, p-value = 0.03418</code></pre>
 </div>
 </div>
 <ul>
-<li><p><strong>Ajustamos un modelo de regresión lineal con la función <code>lm()</code></strong></p></li>
-<li><p><strong>Proporciona una interpretación para los coeficientes</strong></p></li>
+<li><strong>Ajustamos un modelo de regresión lineal con la función <code>lm()</code></strong></li>
 </ul>
-<p><span class="math display">\[SBP = \beta_0 + \beta_1*age + \beta_2*I(sex=\mbox{"M"})\]</span> <!-- -   $\beta_0=96.774$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido) --></p>
-<!-- -   $\beta_0 + \beta_2=110.287$ mmHg: Valor esperado para un hombre de 0 años de edad (en este ejemplo, no tiene sentido) -->
-<!-- -   $\beta_1=0.956$: Por cada año que aumenta la edad de un paciente (hombre o mujer), se espera que la presión sistólica aumente en 0.956 mmHg. -->
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>model.AgeSex <span class="ot">&lt;-</span> <span class="fu">lm</span>(sbp <span class="sc">~</span> age <span class="sc">+</span> sex, <span class="at">data=</span>datos)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.AgeSex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = sbp ~ age + sex, data = datos)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-20.705  -3.299   1.248   4.325  21.160 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 96.77353    3.62085  26.727  &lt; 2e-16 ***
+age          0.95606    0.07153  13.366  &lt; 2e-16 ***
+sexM        13.51345    2.16932   6.229  3.7e-08 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 8.878 on 66 degrees of freedom
+Multiple R-squared:  0.7759,    Adjusted R-squared:  0.7691 
+F-statistic: 114.2 on 2 and 66 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
 <ul>
-<li><strong>Obtén la predicción para hombres y mujeres de 20, 30, y 40 años de edad</strong></li>
+<li><strong>Proporciona una interpretación para los coeficientes</strong></li>
 </ul>
+<p><span class="math display">\[SBP = \beta_0 + \beta_1*age + \beta_2*I(sex=\mbox{"M"})\]</span> - <span class="math inline">\(\beta_0=96.774\)</span> mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido)</p>
+<ul>
+<li><p><span class="math inline">\(\beta_0 + \beta_2=110.287\)</span> mmHg: Valor esperado para un hombre de 0 años de edad (en este ejemplo, no tiene sentido)</p></li>
+<li><p><span class="math inline">\(\beta_1=0.956\)</span>: Por cada año que aumenta la edad de un paciente (hombre o mujer), se espera que la presión sistólica aumente en 0.956 mmHg.</p></li>
+<li><p><strong>Obtén la predicción para hombres y mujeres de 20, 30, y 40 años de edad</strong></p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>newdata <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">age=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">40</span>), <span class="at">sex=</span><span class="fu">c</span>(<span class="st">"M"</span>,<span class="st">"F"</span>,<span class="st">"M"</span>,<span class="st">"F"</span>,<span class="st">"M"</span>,<span class="st">"F"</span>))</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(model.AgeSex, newdata, <span class="at">interval=</span><span class="st">"prediction"</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cbind</span>(newdata, predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  age sex      fit       lwr      upr
+1  20   M 129.4081 111.05519 147.7611
+2  20   F 115.8947  97.51421 134.2752
+3  30   M 138.9687 120.86107 157.0764
+4  30   F 125.4553 107.29885 143.6117
+5  40   M 148.5293 130.55647 166.5021
+6  40   F 135.0158 116.97289 153.0588</code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="para-entregar" class="level1">

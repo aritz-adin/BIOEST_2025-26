@@ -80,7 +80,7 @@ cbind(newdata, predictions)
 
 -   **Seleccionamos las mujeres, representamos un diagrama de dispersión y ajustamos un modelo de regresión lineal con la función `lm()`**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 pos <- which(datos$sex=="F")
 datos.female <- datos[pos,]
 
@@ -97,24 +97,24 @@ model.female <- lm(sbp~age, data=datos.female)
 
 -   **Proporciona una interpretación para los coeficientes**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 summary(model.female)
 ```
 
-<!-- -   $\beta_0=97.0771$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido) -->
+-   $\beta_0=97.0771$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido)
 
-<!-- -   $\beta_1=0.9493$: Por cada año que aumenta la edad de una mujer, se espera que la presión sistólica aumente en 0.9493 mmHg. -->
+-   $\beta_1=0.9493$: Por cada año que aumenta la edad de una mujer, se espera que la presión sistólica aumente en 0.9493 mmHg.
 
 -   **Representa gráficamente la línea ajustada**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 plot(datos.female$age, datos.female$sbp)
 abline(model.female, col="red", lwd=2)
 ```
 
 -   **Verifica que se cumplen las hipótesis del modelo**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 library(PASWR2)
 checking.plots(model.female)
 
@@ -124,7 +124,7 @@ shapiro.test(res)
 
 -   **Obtén la predicción para cinco mujeres de 23, 26, 32, 55 y 62 años de edad**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 newdata <- data.frame(age=c(23,26,32,55,62))
 
 predictions <- predict(model.female, newdata, interval="prediction")
@@ -139,23 +139,23 @@ plot(datos$age, datos$sbp, col=ifelse(datos$sex=="M","blue","red"))
 legend("topleft", legend=c("Hombres","Mujeres"), lty=1, col=c("blue","red"))
 ```
 -   **Ajustamos un modelo de regresión lineal con la función `lm()`**
-```{r, include=FALSE}
+```{r, include=TRUE}
 model.AgeSex <- lm(sbp ~ age + sex, data=datos)
 summary(model.AgeSex)
 ```
 -   **Proporciona una interpretación para los coeficientes**
 
 $$SBP = \beta_0 + \beta_1*age + \beta_2*I(sex=\mbox{"M"})$$
-<!-- -   $\beta_0=96.774$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido) -->
+-   $\beta_0=96.774$ mmHg: Valor esperado para una mujer de 0 años de edad (en este ejemplo, no tiene sentido)
 
-<!-- -   $\beta_0 + \beta_2=110.287$ mmHg: Valor esperado para un hombre de 0 años de edad (en este ejemplo, no tiene sentido) -->
+-   $\beta_0 + \beta_2=110.287$ mmHg: Valor esperado para un hombre de 0 años de edad (en este ejemplo, no tiene sentido)
 
-<!-- -   $\beta_1=0.956$: Por cada año que aumenta la edad de un paciente (hombre o mujer), se espera que la presión sistólica aumente en 0.956 mmHg. -->
+-   $\beta_1=0.956$: Por cada año que aumenta la edad de un paciente (hombre o mujer), se espera que la presión sistólica aumente en 0.956 mmHg.
 
 
 -   **Obtén la predicción para hombres y mujeres de 20, 30, y 40 años de edad**
 
-```{r, include=FALSE}
+```{r, include=TRUE}
 newdata <- data.frame(age=c(20,20,30,30,40,40), sex=c("M","F","M","F","M","F"))
 
 predictions <- predict(model.AgeSex, newdata, interval="prediction")
