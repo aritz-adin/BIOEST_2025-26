@@ -14,7 +14,7 @@ format: gfm
 | 10-noviembre | [Práctica 4: Regresión lineal](./Practica4.html)             |
 | 17-noviembre | [Práctica 5: Asociación. Riesgos relativos y Odds Ratio](./Practica5.html)       |
 | 26-noviembre | [Práctica 6: Regresión logística](./Practica6.html)          |
-| 15-diciembre | Práctica 7: Análisis de supervivencia                        |
+| 15-diciembre | [Práctica 7: Análisis de supervivencia](./Practica7.html)    |
 | 17-diciembre | Práctica repaso                                              |
 
 ## Bibliografía {style="color: black"}
