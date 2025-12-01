@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Aritz Adin">
-<meta name="dcterms.date" content="2024-01-12">
+<meta name="dcterms.date" content="2025-01-12">
 
 <title>Práctica 7: Análisis de Supervivencia – BIOEST 2025-26</title>
 <style>
@@ -225,6 +225,14 @@ window.Quarto = {
   <li><a href="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-según-la-extensión-del-tumor.-crees-que-existen-diferencias-entre-las-curvas" id="toc-estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-según-la-extensión-del-tumor.-crees-que-existen-diferencias-entre-las-curvas" class="nav-link" data-scroll-target="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-según-la-extensión-del-tumor.-crees-que-existen-diferencias-entre-las-curvas">1.6. Estima curvas de supervivencia por el método de Kaplan y Meier según la extensión del tumor. ¿Crees que existen diferencias entre las curvas?</a></li>
   <li><a href="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-edad-grupo-1-1845-grupo-2-4565-y-grupo-3-65.-crees-que-existen-diferencias-entre-las-curvas" id="toc-estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-edad-grupo-1-1845-grupo-2-4565-y-grupo-3-65.-crees-que-existen-diferencias-entre-las-curvas" class="nav-link" data-scroll-target="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-edad-grupo-1-1845-grupo-2-4565-y-grupo-3-65.-crees-que-existen-diferencias-entre-las-curvas">1.7. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable edad: grupo 1 [18,45], grupo 2 (45,65] y grupo 3 (65,+]. ¿Crees que existen diferencias entre las curvas?</a></li>
   </ul></li>
+  <li><a href="#para-entregar" id="toc-para-entregar" class="nav-link" data-scroll-target="#para-entregar">Para entregar</a>
+  <ul class="collapse">
+  <li><a href="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-para-los-grupos-standard-y-test-del-tratamiento.-son-las-curvas-significativamente-distintas" id="toc-estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-para-los-grupos-standard-y-test-del-tratamiento.-son-las-curvas-significativamente-distintas" class="nav-link" data-scroll-target="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-para-los-grupos-standard-y-test-del-tratamiento.-son-las-curvas-significativamente-distintas">1.1. Estima curvas de supervivencia por el método de Kaplan y Meier para los grupos standard y test del tratamiento. ¿Son las curvas significativamente distintas?</a></li>
+  <li><a href="#cuál-es-la-supervivencia-en-el-instante-13-para-los-distintos-grupos-qué-significa" id="toc-cuál-es-la-supervivencia-en-el-instante-13-para-los-distintos-grupos-qué-significa" class="nav-link" data-scroll-target="#cuál-es-la-supervivencia-en-el-instante-13-para-los-distintos-grupos-qué-significa">1.2. ¿Cuál es la supervivencia en el instante 13 para los distintos grupos? ¿Qué significa?</a></li>
+  <li><a href="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-karnofsky-grupo-1-0-50-años-grupo-2-50-70-y-grupo-3-70-100." id="toc-estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-karnofsky-grupo-1-0-50-años-grupo-2-50-70-y-grupo-3-70-100." class="nav-link" data-scroll-target="#estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-karnofsky-grupo-1-0-50-años-grupo-2-50-70-y-grupo-3-70-100.">1.3. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable Karnofsky: grupo 1 (0-50] años, grupo 2 (50-70] y grupo 3 (70-100].</a></li>
+  <li><a href="#comprueba-si-las-diferencias-observadas-en-las-curvas-son-o-no-estadísticamente-significativas-utilizando-el-test-de-log-rank-y-el-test-de-peto-peto.-alpha0.05" id="toc-comprueba-si-las-diferencias-observadas-en-las-curvas-son-o-no-estadísticamente-significativas-utilizando-el-test-de-log-rank-y-el-test-de-peto-peto.-alpha0.05" class="nav-link" data-scroll-target="#comprueba-si-las-diferencias-observadas-en-las-curvas-son-o-no-estadísticamente-significativas-utilizando-el-test-de-log-rank-y-el-test-de-peto-peto.-alpha0.05">1.4. Comprueba si las diferencias observadas en las curvas son o no estadísticamente significativas utilizando el test de Log-Rank y el test de Peto-Peto. <span class="math inline">\(\alpha=0.05\)</span></a></li>
+  <li><a href="#cuál-es-la-probabilidad-de-supervivencia-para-el-grupo-1-0-50-en-el-día-24-y-en-el-grupo-2-5070.-proporciona-un-intervalo-de-confianza-al-95-para-dichas-probabilidades." id="toc-cuál-es-la-probabilidad-de-supervivencia-para-el-grupo-1-0-50-en-el-día-24-y-en-el-grupo-2-5070.-proporciona-un-intervalo-de-confianza-al-95-para-dichas-probabilidades." class="nav-link" data-scroll-target="#cuál-es-la-probabilidad-de-supervivencia-para-el-grupo-1-0-50-en-el-día-24-y-en-el-grupo-2-5070.-proporciona-un-intervalo-de-confianza-al-95-para-dichas-probabilidades.">1.5 ¿Cuál es la probabilidad de supervivencia para el grupo 1 (0-50] en el día 24? ¿Y en el grupo 2 (50,70]?. Proporciona un intervalo de confianza al 95% para dichas probabilidades.</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -250,7 +258,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">01/12/2024</p>
+      <p class="date">01/12/2025</p>
     </div>
   </div>
   
@@ -376,27 +384,53 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-edad-grupo-1-1845-grupo-2-4565-y-grupo-3-65.-crees-que-existen-diferencias-entre-las-curvas">1.7. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable edad: grupo 1 [18,45], grupo 2 (45,65] y grupo 3 (65,+]. ¿Crees que existen diferencias entre las curvas?</h3>
 <!-- En primer lugar definimos la nueva variable: -->
 <!-- A continuación, estimamos las curvas de supervivencia por el método KM y comprobamos si existen diferencias significativas entre los grupos de edad: -->
-<!-- ## Para entregar -->
-<!-- Disponemos de 137 pacientes con cancer de pulmón. Los datos se encuentran en el fichero `VA` de la librería `MASS`. La variable respuesta es el tiempo de supervivencia en días. El fichero tiene las siguientes variables: -->
-<!-- -   `stime`: tiempo de supervivencia en días -->
-<!-- -   `status`: variable que mide el fallo (1) o la censura (0) -->
-<!-- -   `treat`: tratamiento standard (1) o test (2) -->
-<!-- -   `cell`: cuatro tipos distintos de células (1=squamous, 2=smallcell, 3=adeno, 4=large) -->
-<!-- -   `Karn`: puntuación Karnofsky medido en una escala de 0-100, con valores altos para pacientes que se encuentran relativamente bien -->
-<!-- -   `diag.time`: Tiempo en meses desde el diagnóstico al entrar en la prueba -->
-<!-- -   `age`: edad en años -->
-<!-- -   `prior`: variable lógica que determina si hubo terapia a priori (0=no, 10=yes) -->
-<!-- ```{r, include=TRUE} -->
-<!-- library(MASS) -->
-<!-- data("VA") -->
-<!-- str(VA) -->
-<!-- ``` -->
-<!-- Responde a las siguientes preguntas: -->
-<!-- ### 1.1. Estima curvas de supervivencia por el método de Kaplan y Meier para los grupos standard y test del tratamiento. ¿Son las curvas significativamente distintas? -->
-<!-- ### 1.2. ¿Cuál es la supervivencia en el instante 13 para los distintos grupos? ¿Qué significa? -->
-<!-- ### 1.3. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable Karnofsky: grupo 1 (0-50\] años, grupo 2 (50-70\] y grupo 3 (70-100\]. -->
-<!-- ### 1.4. Comprueba si las diferencias observadas en las curvas son o no estadísticamente significativas utilizando el test de Log-Rank y el test de Peto-Peto. $\alpha=0.05$ -->
-<!-- ### 1.5 ¿Cuál es la probabilidad de supervivencia para el grupo 1 (0-50\] en el día 24? ¿Y en el grupo 2 (50,70\]?. Proporciona un intervalo de confianza al 95% para dichas probabilidades. -->
+</section>
+</section>
+<section id="para-entregar" class="level2">
+<h2 class="anchored" data-anchor-id="para-entregar">Para entregar</h2>
+<p>Disponemos de 137 pacientes con cancer de pulmón. Los datos se encuentran en el fichero <code>VA</code> de la librería <code>MASS</code>. La variable respuesta es el tiempo de supervivencia en días. El fichero tiene las siguientes variables:</p>
+<ul>
+<li><code>stime</code>: tiempo de supervivencia en días</li>
+<li><code>status</code>: variable que mide el fallo (1) o la censura (0)</li>
+<li><code>treat</code>: tratamiento standard (1) o test (2)</li>
+<li><code>cell</code>: cuatro tipos distintos de células (1=squamous, 2=smallcell, 3=adeno, 4=large)</li>
+<li><code>Karn</code>: puntuación Karnofsky medido en una escala de 0-100, con valores altos para pacientes que se encuentran relativamente bien</li>
+<li><code>diag.time</code>: Tiempo en meses desde el diagnóstico al entrar en la prueba</li>
+<li><code>age</code>: edad en años</li>
+<li><code>prior</code>: variable lógica que determina si hubo terapia a priori (0=no, 10=yes)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"VA"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(VA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   137 obs. of  8 variables:
+ $ stime    : num  72 411 228 126 118 10 82 110 314 100 ...
+ $ status   : num  1 1 1 1 1 1 1 1 1 0 ...
+ $ treat    : Factor w/ 2 levels "1","2": 1 1 1 1 1 1 1 1 1 1 ...
+ $ age      : num  69 64 38 63 65 49 69 68 43 70 ...
+ $ Karn     : num  60 70 60 60 70 20 40 80 50 70 ...
+ $ diag.time: num  7 5 3 9 11 5 10 29 18 6 ...
+ $ cell     : Factor w/ 4 levels "1","2","3","4": 1 1 1 1 1 1 1 1 1 1 ...
+ $ prior    : Factor w/ 2 levels "0","10": 1 2 1 2 2 1 2 1 1 1 ...</code></pre>
+</div>
+</div>
+<p>Responde a las siguientes preguntas:</p>
+<section id="estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-para-los-grupos-standard-y-test-del-tratamiento.-son-las-curvas-significativamente-distintas" class="level3">
+<h3 class="anchored" data-anchor-id="estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-para-los-grupos-standard-y-test-del-tratamiento.-son-las-curvas-significativamente-distintas">1.1. Estima curvas de supervivencia por el método de Kaplan y Meier para los grupos standard y test del tratamiento. ¿Son las curvas significativamente distintas?</h3>
+</section>
+<section id="cuál-es-la-supervivencia-en-el-instante-13-para-los-distintos-grupos-qué-significa" class="level3">
+<h3 class="anchored" data-anchor-id="cuál-es-la-supervivencia-en-el-instante-13-para-los-distintos-grupos-qué-significa">1.2. ¿Cuál es la supervivencia en el instante 13 para los distintos grupos? ¿Qué significa?</h3>
+</section>
+<section id="estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-karnofsky-grupo-1-0-50-años-grupo-2-50-70-y-grupo-3-70-100." class="level3">
+<h3 class="anchored" data-anchor-id="estima-curvas-de-supervivencia-por-el-método-de-kaplan-y-meier-a-partir-de-los-siguientes-valores-de-la-variable-karnofsky-grupo-1-0-50-años-grupo-2-50-70-y-grupo-3-70-100.">1.3. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable Karnofsky: grupo 1 (0-50] años, grupo 2 (50-70] y grupo 3 (70-100].</h3>
+</section>
+<section id="comprueba-si-las-diferencias-observadas-en-las-curvas-son-o-no-estadísticamente-significativas-utilizando-el-test-de-log-rank-y-el-test-de-peto-peto.-alpha0.05" class="level3">
+<h3 class="anchored" data-anchor-id="comprueba-si-las-diferencias-observadas-en-las-curvas-son-o-no-estadísticamente-significativas-utilizando-el-test-de-log-rank-y-el-test-de-peto-peto.-alpha0.05">1.4. Comprueba si las diferencias observadas en las curvas son o no estadísticamente significativas utilizando el test de Log-Rank y el test de Peto-Peto. <span class="math inline">\(\alpha=0.05\)</span></h3>
+</section>
+<section id="cuál-es-la-probabilidad-de-supervivencia-para-el-grupo-1-0-50-en-el-día-24-y-en-el-grupo-2-5070.-proporciona-un-intervalo-de-confianza-al-95-para-dichas-probabilidades." class="level3">
+<h3 class="anchored" data-anchor-id="cuál-es-la-probabilidad-de-supervivencia-para-el-grupo-1-0-50-en-el-día-24-y-en-el-grupo-2-5070.-proporciona-un-intervalo-de-confianza-al-95-para-dichas-probabilidades.">1.5 ¿Cuál es la probabilidad de supervivencia para el grupo 1 (0-50] en el día 24? ¿Y en el grupo 2 (50,70]?. Proporciona un intervalo de confianza al 95% para dichas probabilidades.</h3>
 
 
 </section>

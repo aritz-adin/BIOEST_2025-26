@@ -1,7 +1,7 @@
 ---
 title: "Práctica 7: Análisis de Supervivencia"
 author: "Aritz Adin"
-date: "2024-12-01"
+date: "2025-12-01"
 date-format: "DD/MM/YYYY"
 format:
   html:
@@ -52,7 +52,7 @@ summary(diu.surv1)
 diu.surv2 <- survfit(Surv(time,status)~1, diu, conf.type="log-log")
 summary(diu.surv2)
 
-## Intervalo de confianza aplicando logaritmos (por defecto) ##
+## Intervalo de confianza con la transformación logística (por defecto) ##
 diu.surv3 <- survfit(Surv(time,status)~1, diu)
 summary(diu.surv3)
 ```
@@ -195,34 +195,34 @@ plot(colon.surv5, col=c(1,2,3), lwd=2, main="Curvas de supervivencia KM")
 legend("bottomleft", c("[18,45] años","(45,65] años","(65,+] años"), col=c(1,2,3), lwd=2, bty="n")
 ```
 
-<!-- ## Para entregar -->
+## Para entregar
 
-<!-- Disponemos de 137 pacientes con cancer de pulmón. Los datos se encuentran en el fichero `VA` de la librería `MASS`. La variable respuesta es el tiempo de supervivencia en días. El fichero tiene las siguientes variables: -->
+Disponemos de 137 pacientes con cancer de pulmón. Los datos se encuentran en el fichero `VA` de la librería `MASS`. La variable respuesta es el tiempo de supervivencia en días. El fichero tiene las siguientes variables:
 
-<!-- -   `stime`: tiempo de supervivencia en días -->
-<!-- -   `status`: variable que mide el fallo (1) o la censura (0) -->
-<!-- -   `treat`: tratamiento standard (1) o test (2) -->
-<!-- -   `cell`: cuatro tipos distintos de células (1=squamous, 2=smallcell, 3=adeno, 4=large) -->
-<!-- -   `Karn`: puntuación Karnofsky medido en una escala de 0-100, con valores altos para pacientes que se encuentran relativamente bien -->
-<!-- -   `diag.time`: Tiempo en meses desde el diagnóstico al entrar en la prueba -->
-<!-- -   `age`: edad en años -->
-<!-- -   `prior`: variable lógica que determina si hubo terapia a priori (0=no, 10=yes) -->
+-   `stime`: tiempo de supervivencia en días
+-   `status`: variable que mide el fallo (1) o la censura (0)
+-   `treat`: tratamiento standard (1) o test (2)
+-   `cell`: cuatro tipos distintos de células (1=squamous, 2=smallcell, 3=adeno, 4=large)
+-   `Karn`: puntuación Karnofsky medido en una escala de 0-100, con valores altos para pacientes que se encuentran relativamente bien
+-   `diag.time`: Tiempo en meses desde el diagnóstico al entrar en la prueba
+-   `age`: edad en años
+-   `prior`: variable lógica que determina si hubo terapia a priori (0=no, 10=yes)
 
-<!-- ```{r, include=TRUE} -->
-<!-- library(MASS) -->
+```{r, include=TRUE}
+library(MASS)
 
-<!-- data("VA") -->
-<!-- str(VA) -->
-<!-- ``` -->
+data("VA")
+str(VA)
+```
 
-<!-- Responde a las siguientes preguntas: -->
+Responde a las siguientes preguntas:
 
-<!-- ### 1.1. Estima curvas de supervivencia por el método de Kaplan y Meier para los grupos standard y test del tratamiento. ¿Son las curvas significativamente distintas? -->
+### 1.1. Estima curvas de supervivencia por el método de Kaplan y Meier para los grupos standard y test del tratamiento. ¿Son las curvas significativamente distintas?
 
-<!-- ### 1.2. ¿Cuál es la supervivencia en el instante 13 para los distintos grupos? ¿Qué significa? -->
+### 1.2. ¿Cuál es la supervivencia en el instante 13 para los distintos grupos? ¿Qué significa?
 
-<!-- ### 1.3. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable Karnofsky: grupo 1 (0-50\] años, grupo 2 (50-70\] y grupo 3 (70-100\]. -->
+### 1.3. Estima curvas de supervivencia por el método de Kaplan y Meier a partir de los siguientes valores de la variable Karnofsky: grupo 1 (0-50\] años, grupo 2 (50-70\] y grupo 3 (70-100\].
 
-<!-- ### 1.4. Comprueba si las diferencias observadas en las curvas son o no estadísticamente significativas utilizando el test de Log-Rank y el test de Peto-Peto. $\alpha=0.05$ -->
+### 1.4. Comprueba si las diferencias observadas en las curvas son o no estadísticamente significativas utilizando el test de Log-Rank y el test de Peto-Peto. $\alpha=0.05$
 
-<!-- ### 1.5 ¿Cuál es la probabilidad de supervivencia para el grupo 1 (0-50\] en el día 24? ¿Y en el grupo 2 (50,70\]?. Proporciona un intervalo de confianza al 95% para dichas probabilidades. -->
+### 1.5 ¿Cuál es la probabilidad de supervivencia para el grupo 1 (0-50\] en el día 24? ¿Y en el grupo 2 (50,70\]?. Proporciona un intervalo de confianza al 95% para dichas probabilidades.
